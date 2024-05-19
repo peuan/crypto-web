@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
-  Typography,
   IconButton,
   Drawer,
   List,
@@ -15,10 +14,11 @@ import {
   Container,
   Box,
   Grid,
+  Link,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import Link from "next/link";
 import { ReactNode } from "react";
+import AutoGraphIcon from "@mui/icons-material/AutoGraph";
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -34,14 +34,19 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const drawer = (
     <Box width={250}>
       <List>
-        <ListItem component={Link} href="#" passHref>
+        <ListItem href="#" button>
           <Button fullWidth variant="outlined">
             Launch app
           </Button>
         </ListItem>
-        <ListItem component={Link} href="#" passHref>
-          <Button fullWidth variant="contained">
-            Get my card
+        <ListItem href="#" button>
+          <Button fullWidth variant="outlined">
+            Help center
+          </Button>
+        </ListItem>
+        <ListItem href="#" button>
+          <Button fullWidth variant="outlined">
+            Refer a friend
           </Button>
         </ListItem>
       </List>
@@ -62,27 +67,59 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             }}
           >
             <Grid container justifyContent="space-between">
-              <Grid item xs="auto">
-                <Typography variant="h6" noWrap>
-                  <Link href="#" passHref>
-                    Logo
+              <Grid
+                item
+                xs="auto"
+                display="flex"
+                alignItems="center"
+                gap={{ xs: 1, md: 2 }}
+              >
+                <Link
+                  sx={{
+                    color: "common.white",
+                    display: "flex",
+                    gap: 1,
+                    alignItems: "center",
+                    typography: {
+                      xs: "h6",
+                      md: "h5",
+                    },
+                  }}
+                  href="#"
+                >
+                  {/* TODO: Change to correct logo */}
+                  <AutoGraphIcon sx={{ color: "common.white" }} /> Landing Page
+                </Link>
+                <Hidden mdDown>
+                  <Link sx={{ color: "common.white" }} href="#">
+                    Help center
                   </Link>
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Hidden smUp>
-                  <IconButton
-                    color="primary"
-                    aria-label="open drawer"
-                    edge="start"
-                    onClick={handleDrawerToggle}
-                  >
-                    <MenuIcon />
-                  </IconButton>
+                  <Link sx={{ color: "common.white" }} href="#">
+                    Refer a friend
+                  </Link>
                 </Hidden>
               </Grid>
-              <Grid item container sm="auto" gap={1}>
-                <Hidden smDown>
+              <Grid item>
+                <Hidden mdUp>
+                  <Grid container gap={2}>
+                    <Grid item>
+                      <Button variant="contained">Get my card</Button>
+                    </Grid>
+                    <Grid item>
+                      <IconButton
+                        color="primary"
+                        aria-label="open drawer"
+                        edge="start"
+                        onClick={handleDrawerToggle}
+                      >
+                        <MenuIcon />
+                      </IconButton>
+                    </Grid>
+                  </Grid>
+                </Hidden>
+              </Grid>
+              <Grid item container md="auto" gap={1}>
+                <Hidden mdDown>
                   <Grid item>
                     <Button variant="outlined">Launch app</Button>
                   </Grid>
@@ -96,7 +133,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         </Container>
       </AppBar>
       <nav>
-        <Hidden smUp>
+        <Hidden mdUp>
           <Drawer
             anchor="right"
             open={mobileOpen}
