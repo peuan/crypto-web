@@ -24,10 +24,10 @@ interface MainLayoutProps {
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   const handleDrawerToggle = () => {
-    setMobileOpen(!mobileOpen);
+    setDrawerOpen(!isDrawerOpen);
   };
 
   const drawer = (
@@ -53,7 +53,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   );
 
   return (
-    <div>
+    <>
       <AppBar sx={{ bgcolor: "secondary.main" }} position="sticky">
         <Container>
           <Toolbar
@@ -134,7 +134,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <Hidden mdUp>
           <Drawer
             anchor="right"
-            open={mobileOpen}
+            open={isDrawerOpen}
             onClose={handleDrawerToggle}
             PaperProps={{
               sx: {
@@ -149,7 +149,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       <Box component="main" sx={{ py: 2 }}>
         <Container>{children}</Container>
       </Box>
-    </div>
+    </>
   );
 };
 
