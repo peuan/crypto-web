@@ -9,7 +9,6 @@ import {
   List,
   ListItem,
   Hidden,
-  CssBaseline,
   Button,
   Container,
   Box,
@@ -55,7 +54,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
   return (
     <div>
-      <CssBaseline />
       <AppBar sx={{ bgcolor: "secondary.main" }} position="sticky">
         <Container>
           <Toolbar

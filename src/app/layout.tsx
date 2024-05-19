@@ -4,6 +4,7 @@ import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/theme";
 import TheMainLayout from "@/components/TheMainLayout";
+import { CssBaseline } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <AppRouterCacheProvider>
         <ThemeProvider theme={theme}>
+          <CssBaseline />
           <body className={inter.className} suppressHydrationWarning={true}>
             <TheMainLayout>{children}</TheMainLayout>
           </body>
