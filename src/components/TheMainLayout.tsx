@@ -71,7 +71,7 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
                 xs="auto"
                 display="flex"
                 alignItems="center"
-                spacing={{ xs: 1, md: 2 }}
+                gap={{ xs: 1, md: 2 }}
               >
                 <Link
                   sx={{
