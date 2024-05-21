@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import React, { useState } from "react";
+import React, { useState } from "react"
 import {
   AppBar,
   Toolbar,
@@ -14,21 +14,21 @@ import {
   Box,
   Grid,
   Link,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import { ReactNode } from "react";
-import AutoGraphIcon from "@mui/icons-material/AutoGraph";
+} from "@mui/material"
+import MenuIcon from "@mui/icons-material/Menu"
+import { ReactNode } from "react"
+import AutoGraphIcon from "@mui/icons-material/AutoGraph"
 
 interface MainLayoutProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
-  const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const [isDrawerOpen, setDrawerOpen] = useState(false)
 
   const handleDrawerToggle = () => {
-    setDrawerOpen(!isDrawerOpen);
-  };
+    setDrawerOpen(!isDrawerOpen)
+  }
 
   const drawer = (
     <Box width={250}>
@@ -50,7 +50,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         </ListItem>
       </List>
     </Box>
-  );
+  )
 
   return (
     <>
@@ -146,11 +146,11 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           </Drawer>
         </Hidden>
       </nav>
-      <Box component="main" sx={{ py: 2 }}>
+      <Box component="main" sx={{ py: 2, bgcolor: "secondary.main" }}>
         <Container>{children}</Container>
       </Box>
     </>
-  );
-};
+  )
+}
 
-export default MainLayout;
+export default MainLayout
