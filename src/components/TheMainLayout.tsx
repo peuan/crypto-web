@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -14,11 +14,11 @@ import {
   Box,
   Grid,
   Link,
-} from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
-import { ReactNode } from 'react';
-import AutoGraphIcon from '@mui/icons-material/AutoGraph';
-import TheMainFooter from './TheMainFooter';
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import { ReactNode } from "react";
+import AutoGraphIcon from "@mui/icons-material/AutoGraph";
+import TheMainFooter from "./TheMainFooter";
 
 interface TheMainLayoutProps {
   children: ReactNode;
@@ -55,13 +55,13 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
 
   return (
     <>
-      <AppBar sx={{ bgcolor: 'secondary.main' }} position="sticky">
+      <AppBar sx={{ bgcolor: "secondary.main" }} position="sticky">
         <Container>
           <Toolbar
             sx={{
-              px: '0px !important',
+              px: "0px !important",
               minHeight: {
-                md: '84px !important',
+                md: "84px !important",
               },
             }}
           >
@@ -75,25 +75,25 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
               >
                 <Link
                   sx={{
-                    color: 'common.white',
-                    display: 'flex',
+                    color: "common.white",
+                    display: "flex",
                     gap: 1,
-                    alignItems: 'center',
+                    alignItems: "center",
                     typography: {
-                      xs: 'h6',
-                      md: 'h5',
+                      xs: "h6",
+                      md: "h5",
                     },
                   }}
                   href="#"
                 >
                   {/* TODO: Change to correct logo */}
-                  <AutoGraphIcon sx={{ color: 'common.white' }} /> Landing Page
+                  <AutoGraphIcon sx={{ color: "common.white" }} /> Landing Page
                 </Link>
                 <Hidden mdDown>
-                  <Link sx={{ color: 'common.white' }} href="#">
+                  <Link sx={{ color: "common.white" }} href="#">
                     Help center
                   </Link>
-                  <Link sx={{ color: 'common.white' }} href="#">
+                  <Link sx={{ color: "common.white" }} href="#">
                     Refer a friend
                   </Link>
                 </Hidden>
@@ -139,7 +139,7 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
             onClose={handleDrawerToggle}
             PaperProps={{
               sx: {
-                bgcolor: 'secondary.main',
+                bgcolor: "secondary.main",
               },
             }}
           >
@@ -152,9 +152,9 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
         sx={{
           py: 2,
           minHeight: {
-            xs: 'calc(100vh - 64px)',
-            md: 'calc(100vh - 84px)',
-            lg: 'calc(100vh - 300px)',
+            xs: "calc(100vh - 64px)",
+            md: "calc(100vh - 84px)",
+            lg: "calc(100vh - 300px)",
           },
         }}
       >
