@@ -81,7 +81,7 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
                     alignItems: 'center',
                     typography: {
                       xs: 'h6',
-                      md: "h5"
+                      md: 'h5',
                     },
                   }}
                   href="#"
