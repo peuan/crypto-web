@@ -2,7 +2,7 @@
 import { Box, Button, Typography } from "@mui/material"
 import Image from "next/image"
 import CreditCardImage from "../assets/images/credit-card.webp"
-import CoinDeskLogo from "../assets/images/CoinDesk-Logo.png"
+import CoinDeskLogo from "../assets/images/coin-desk-logo.png"
 const HeroSection: React.FC = () => {
   return (
     <Box
