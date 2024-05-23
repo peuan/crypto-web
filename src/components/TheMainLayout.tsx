@@ -99,6 +99,10 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
                       xs: "h6",
                       md: "h5",
                     },
+
+                    ":hover": {
+                      color: "common.white",
+                    },
                   }}
                   href={RoutePath.HOME}
                 >
