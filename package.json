@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "prepare": "husky"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
@@ -25,6 +27,8 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
+    "husky": "^9.0.11",
+    "prettier": "^3.2.5",
     "typescript": "^5"
   }
 }

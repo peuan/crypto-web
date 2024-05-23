@@ -24,8 +24,8 @@ const TheMainFooter = () => {
                   gap: 1,
                   alignItems: "center",
                   justifyContent: {
-                    xs: 'center',
-                    lg: 'flex-start'
+                    xs: "center",
+                    lg: "flex-start",
                   },
                   typography: {
                     xs: "h6",
@@ -58,7 +58,7 @@ const TheMainFooter = () => {
               <FooterLink href="/">Refer a friend</FooterLink>
             </Grid>
             <Grid item xs={12} lg={3} textAlign={{ xs: "center", lg: "right" }}>
-              <XIcon sx={{ fontSize: 30, color: 'grey.700' }} />
+              <XIcon sx={{ fontSize: 30, color: "grey.700" }} />
             </Grid>
           </Grid>
           <Typography color="gray" variant="body2">
