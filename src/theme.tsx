@@ -31,6 +31,9 @@ const theme = createTheme({
     text: {
       secondary: "#6e6c62",
     },
+    background: {
+      gray: "#f0ebde",
+    },
   },
   shape: {
     borderRadius: 8,
@@ -64,6 +67,6 @@ theme.components = {
       LinkComponent: LinkBehavior,
     },
   },
-}
+};
 
 export default theme
