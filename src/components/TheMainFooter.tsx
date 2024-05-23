@@ -1,6 +1,7 @@
 import { Box, Container, Grid, Link, Typography, styled } from "@mui/material";
 import AutoGraphIcon from "@mui/icons-material/AutoGraph";
 import XIcon from "@mui/icons-material/X";
+import { RoutePath } from "@/enums/route-path";
 
 const FooterLink = styled(Link)(({ theme }) => ({
   color: "gray",
@@ -52,10 +53,16 @@ const TheMainFooter = () => {
               flexDirection={{ xs: "column", lg: "row" }}
               gap={{ xs: 1.5, lg: 3 }}
             >
-              <FooterLink href="/">Privacy policy</FooterLink>
-              <FooterLink href="/">Terms & conditions</FooterLink>
-              <FooterLink href="/">Help center</FooterLink>
-              <FooterLink href="/">Refer a friend</FooterLink>
+              <FooterLink href={RoutePath.COMING_SOON}>
+                Privacy policy
+              </FooterLink>
+              <FooterLink href={RoutePath.COMING_SOON}>
+                Terms & conditions
+              </FooterLink>
+              <FooterLink href={RoutePath.COMING_SOON}>Help center</FooterLink>
+              <FooterLink href={RoutePath.COMING_SOON}>
+                Refer a friend
+              </FooterLink>
             </Grid>
             <Grid item xs={12} lg={3} textAlign={{ xs: "center", lg: "right" }}>
               <XIcon sx={{ fontSize: 30, color: "grey.700" }} />

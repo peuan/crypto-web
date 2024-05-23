@@ -19,6 +19,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { ReactNode } from "react";
 import AutoGraphIcon from "@mui/icons-material/AutoGraph";
 import TheMainFooter from "./TheMainFooter";
+import { RoutePath } from "@/enums/route-path";
 
 interface TheMainLayoutProps {
   children: ReactNode;
@@ -34,18 +35,33 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
   const drawer = (
     <Box width={250}>
       <List>
-        <ListItem href="#" button>
-          <Button fullWidth variant="outlined">
+        <ListItem>
+          <Button
+            href={RoutePath.COMING_SOON}
+            fullWidth
+            variant="outlined"
+            onClick={handleDrawerToggle}
+          >
             Launch app
           </Button>
         </ListItem>
-        <ListItem href="#" button>
-          <Button fullWidth variant="outlined">
+        <ListItem>
+          <Button
+            href={RoutePath.COMING_SOON}
+            fullWidth
+            variant="outlined"
+            onClick={handleDrawerToggle}
+          >
             Help center
           </Button>
         </ListItem>
-        <ListItem href="#" button>
-          <Button fullWidth variant="outlined">
+        <ListItem>
+          <Button
+            href={RoutePath.COMING_SOON}
+            fullWidth
+            variant="outlined"
+            onClick={handleDrawerToggle}
+          >
             Refer a friend
           </Button>
         </ListItem>
@@ -84,16 +100,22 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
                       md: "h5",
                     },
                   }}
-                  href="#"
+                  href="/"
                 >
                   {/* TODO: Change to correct logo */}
                   <AutoGraphIcon sx={{ color: "common.white" }} /> Landing Page
                 </Link>
                 <Hidden mdDown>
-                  <Link sx={{ color: "common.white" }} href="#">
+                  <Link
+                    sx={{ color: "common.white" }}
+                    href={RoutePath.COMING_SOON}
+                  >
                     Help center
                   </Link>
-                  <Link sx={{ color: "common.white" }} href="#">
+                  <Link
+                    sx={{ color: "common.white" }}
+                    href={RoutePath.COMING_SOON}
+                  >
                     Refer a friend
                   </Link>
                 </Hidden>
@@ -102,7 +124,9 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
                 <Hidden mdUp>
                   <Grid container spacing={2}>
                     <Grid item>
-                      <Button variant="contained">Get my card</Button>
+                      <Button href={RoutePath.COMING_SOON} variant="contained">
+                        Get my card
+                      </Button>
                     </Grid>
                     <Grid item>
                       <IconButton
@@ -120,10 +144,14 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
               <Grid item container md="auto" spacing={1}>
                 <Hidden mdDown>
                   <Grid item>
-                    <Button variant="outlined">Launch app</Button>
+                    <Button href={RoutePath.COMING_SOON} variant="outlined">
+                      Launch app
+                    </Button>
                   </Grid>
                   <Grid item>
-                    <Button variant="contained">Get my card</Button>
+                    <Button href={RoutePath.COMING_SOON} variant="contained">
+                      Get my card
+                    </Button>
                   </Grid>
                 </Hidden>
               </Grid>
@@ -156,9 +184,10 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
             md: "calc(100vh - 84px)",
             lg: "calc(100vh - 300px)",
           },
+          display: "flex",
         }}
       >
-        <Container>{children}</Container>
+        <Container sx={{ flex: 1 }}>{children}</Container>
       </Box>
       <TheMainFooter />
     </>
