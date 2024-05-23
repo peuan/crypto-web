@@ -18,12 +18,13 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { ReactNode } from "react";
 import AutoGraphIcon from "@mui/icons-material/AutoGraph";
+import TheMainFooter from "./TheMainFooter";
 
-interface MainLayoutProps {
+interface TheMainLayoutProps {
   children: ReactNode;
 }
 
-const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+const TheMainLayout = ({ children }: TheMainLayoutProps) => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -60,7 +61,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             sx={{
               px: "0px !important",
               minHeight: {
-                sm: "84px !important",
+                md: "84px !important",
               },
             }}
           >
@@ -99,7 +100,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
               </Grid>
               <Grid item>
                 <Hidden mdUp>
-                  <Grid container gap={2}>
+                  <Grid container spacing={2}>
                     <Grid item>
                       <Button variant="contained">Get my card</Button>
                     </Grid>
@@ -116,7 +117,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
                   </Grid>
                 </Hidden>
               </Grid>
-              <Grid item container md="auto" gap={1}>
+              <Grid item container md="auto" spacing={1}>
                 <Hidden mdDown>
                   <Grid item>
                     <Button variant="outlined">Launch app</Button>
@@ -130,7 +131,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           </Toolbar>
         </Container>
       </AppBar>
-      <nav>
+      <Box component="nav">
         <Hidden mdUp>
           <Drawer
             anchor="right"
@@ -145,12 +146,23 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             {drawer}
           </Drawer>
         </Hidden>
-      </nav>
-      <Box component="main" sx={{ py: 2 }}>
+      </Box>
+      <Box
+        component="main"
+        sx={{
+          py: 2,
+          minHeight: {
+            xs: "calc(100vh - 64px)",
+            md: "calc(100vh - 84px)",
+            lg: "calc(100vh - 300px)",
+          },
+        }}
+      >
         <Container>{children}</Container>
       </Box>
+      <TheMainFooter />
     </>
   );
 };
 
-export default MainLayout;
+export default TheMainLayout;

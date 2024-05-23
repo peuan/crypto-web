@@ -28,6 +28,9 @@ const theme = createTheme({
     secondary: {
       main: "#1b1a16",
     },
+    background: {
+      gray: "#f0ebde",
+    },
   },
   shape: {
     borderRadius: 8,
@@ -36,26 +39,26 @@ const theme = createTheme({
 
 // override component
 theme.components = {
-    MuiLink: {
-      defaultProps: {
-        component: LinkBehavior,
-      },
-      styleOverrides: {
-        root: {
-          textDecoration: 'unset',
+  MuiLink: {
+    defaultProps: {
+      component: LinkBehavior,
+    },
+    styleOverrides: {
+      root: {
+        textDecoration: "unset",
 
-          ":hover": {
-            color: theme.palette.primary.light
-          }
-        }
-      }
-    },
-    MuiButton: {
-      defaultProps: {
-        disableElevation: true,
-        LinkComponent: LinkBehavior,
+        ":hover": {
+          color: theme.palette.primary.light,
+        },
       },
     },
-}
+  },
+  MuiButton: {
+    defaultProps: {
+      disableElevation: true,
+      LinkComponent: LinkBehavior,
+    },
+  },
+};
 
 export default theme;
