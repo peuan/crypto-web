@@ -100,7 +100,7 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
                       md: "h5",
                     },
                   }}
-                  href="/"
+                  href={RoutePath.HOME}
                 >
                   {/* TODO: Change to correct logo */}
                   <AutoGraphIcon sx={{ color: "common.white" }} /> Landing Page

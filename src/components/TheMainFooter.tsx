@@ -37,7 +37,7 @@ const TheMainFooter = () => {
                     color: "common.black",
                   },
                 }}
-                href="/"
+                href={RoutePath.HOME}
               >
                 {/* TODO: Change to correct logo */}
                 <AutoGraphIcon sx={{ color: "common.black" }} /> Landing Page
