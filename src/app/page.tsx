@@ -1,5 +1,5 @@
-import ComingSoonSection from "@/components/ComingSoonSection"
-import HeroSection from "@/components/HeroSection"
+import ComingSoonSection from "@/components/ComingSoonSection";
+import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
   return (
@@ -7,5 +7,5 @@ export default function Home() {
       <HeroSection />
       <ComingSoonSection />
     </main>
-  )
+  );
 }

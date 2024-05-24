@@ -1,10 +1,10 @@
-"use client"
-import { Box, Button, Typography } from "@mui/material"
-import Image from "next/image"
-import IBANImage from "../assets/images/IBAN-coming-feature-icon.webp"
-import PaymentImage from "../assets/images/payment-coming-feature-icon.webp"
-import RewardImage from "../assets/images/reward-coming-feature-icon.webp"
-import CountryImage from "../assets/images/new-country-coming-feature-icon.webp"
+"use client";
+import { Box, Button, Typography } from "@mui/material";
+import Image from "next/image";
+import IBANImage from "../assets/images/IBAN-coming-feature-icon.webp";
+import PaymentImage from "../assets/images/payment-coming-feature-icon.webp";
+import RewardImage from "../assets/images/reward-coming-feature-icon.webp";
+import CountryImage from "../assets/images/new-country-coming-feature-icon.webp";
 
 const ComingSoonSection: React.FC = () => {
   return (
@@ -24,18 +24,18 @@ const ComingSoonSection: React.FC = () => {
       }}
     >
       <Typography
-            variant="h2"
-            sx={{
-              color: "#fcf9f2",
-              fontSize: {
-                xs: "1.75rem",
-                md: "2.5rem",
-              },
-              fontWeight: 400,
-            }}
-          >
-            Coming soon
-          </Typography>
+        variant="h2"
+        sx={{
+          color: "#fcf9f2",
+          fontSize: {
+            xs: "1.75rem",
+            md: "2.5rem",
+          },
+          fontWeight: 400,
+        }}
+      >
+        Coming soon
+      </Typography>
       <Box
         sx={{
           display: "grid",
@@ -55,7 +55,7 @@ const ComingSoonSection: React.FC = () => {
         <Box
           sx={{
             display: "flex",
-            flexDirection: 'column',
+            flexDirection: "column",
             alignItems: "center",
             gap: 2,
             padding: "24px",
@@ -73,7 +73,7 @@ const ComingSoonSection: React.FC = () => {
               color: "#fcf9f2",
               fontSize: "1.5rem",
               fontWeight: 500,
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             IBAN Integration
@@ -84,7 +84,7 @@ const ComingSoonSection: React.FC = () => {
               color: "#d4d0c5",
               fontSize: "1.25rem",
               fontWeight: 400,
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             Transfer Euros to and from your account to any bank or wallet.
@@ -93,7 +93,7 @@ const ComingSoonSection: React.FC = () => {
         <Box
           sx={{
             display: "flex",
-            flexDirection: 'column',
+            flexDirection: "column",
             alignItems: "center",
             gap: 2,
             padding: "24px",
@@ -111,7 +111,7 @@ const ComingSoonSection: React.FC = () => {
               color: "#fcf9f2",
               fontSize: "1.5rem",
               fontWeight: 500,
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             Apple Pay & Google Pay
@@ -122,7 +122,7 @@ const ComingSoonSection: React.FC = () => {
               color: "#d4d0c5",
               fontSize: "1.25rem",
               fontWeight: 400,
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             Accessible via Curve today. Coming natively very soon.
@@ -131,7 +131,7 @@ const ComingSoonSection: React.FC = () => {
         <Box
           sx={{
             display: "flex",
-            flexDirection: 'column',
+            flexDirection: "column",
             alignItems: "center",
             gap: 2,
             padding: "24px",
@@ -149,7 +149,7 @@ const ComingSoonSection: React.FC = () => {
               color: "#fcf9f2",
               fontSize: "1.5rem",
               fontWeight: 500,
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             Rewards & Partnerships
@@ -160,16 +160,17 @@ const ComingSoonSection: React.FC = () => {
               color: "#d4d0c5",
               fontSize: "1.25rem",
               fontWeight: 400,
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
-            New partnerships & perks for OG NFT holders as well as a rewards program for all cardholders.
+            New partnerships & perks for OG NFT holders as well as a rewards
+            program for all cardholders.
           </Typography>
         </Box>
         <Box
           sx={{
             display: "flex",
-            flexDirection: 'column',
+            flexDirection: "column",
             alignItems: "center",
             gap: 2,
             padding: "24px",
@@ -187,7 +188,7 @@ const ComingSoonSection: React.FC = () => {
               color: "#fcf9f2",
               fontSize: "1.5rem",
               fontWeight: 500,
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
             New Countries
@@ -198,15 +199,16 @@ const ComingSoonSection: React.FC = () => {
               color: "#d4d0c5",
               fontSize: "1.25rem",
               fontWeight: 400,
-              textAlign: "center"
+              textAlign: "center",
             }}
           >
-            Brazil, Argentina, Mexico, Colombia, Australia, Thailand, Singapore, Japan, Indonesia.
+            Brazil, Argentina, Mexico, Colombia, Australia, Thailand, Singapore,
+            Japan, Indonesia.
           </Typography>
         </Box>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default ComingSoonSection
+export default ComingSoonSection;

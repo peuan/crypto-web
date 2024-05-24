@@ -1,8 +1,8 @@
-"use client"
-import { Box, Button, Typography } from "@mui/material"
-import Image from "next/image"
-import CreditCardImage from "../assets/images/credit-card.webp"
-import CoinDeskLogo from "../assets/images/coin-desk-logo.png"
+"use client";
+import { Box, Button, Typography } from "@mui/material";
+import Image from "next/image";
+import CreditCardImage from "../assets/images/credit-card.webp";
+import CoinDeskLogo from "../assets/images/coin-desk-logo.png";
 const HeroSection: React.FC = () => {
   return (
     <Box
@@ -113,7 +113,7 @@ const HeroSection: React.FC = () => {
         }}
       ></Box>
     </Box>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;
