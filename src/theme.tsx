@@ -1,21 +1,21 @@
-"use client";
-import { Roboto } from "next/font/google";
-import { createTheme } from "@mui/material/styles";
-import NextLink from "next/link";
-import { forwardRef } from "react";
-import { LinkProps as NextLinkProps } from "next/link";
+"use client"
+import { Roboto } from "next/font/google"
+import { createTheme } from "@mui/material/styles"
+import NextLink from "next/link"
+import { forwardRef } from "react"
+import { LinkProps as NextLinkProps } from "next/link"
 
 const LinkBehavior = forwardRef<HTMLAnchorElement, NextLinkProps>(
   function LinkBehavior(props, ref) {
-    return <NextLink ref={ref} {...props} />;
+    return <NextLink ref={ref} {...props} />
   }
-);
+)
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
-});
+})
 
 const theme = createTheme({
   typography: {
@@ -28,6 +28,9 @@ const theme = createTheme({
     secondary: {
       main: "#1b1a16",
     },
+    text: {
+      secondary: "#6e6c62",
+    },
     background: {
       gray: "#f0ebde",
     },
@@ -35,7 +38,7 @@ const theme = createTheme({
   shape: {
     borderRadius: 8,
   },
-});
+})
 
 // override component
 theme.components = {
@@ -54,6 +57,11 @@ theme.components = {
     },
   },
   MuiButton: {
+    styleOverrides: {
+      root: {
+        textTransform: "none",
+      },
+    },
     defaultProps: {
       disableElevation: true,
       LinkComponent: LinkBehavior,
@@ -61,4 +69,4 @@ theme.components = {
   },
 };
 
-export default theme;
+export default theme
