@@ -180,21 +180,7 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
           </Drawer>
         </Hidden>
       </Box>
-      <Box
-        component="main"
-        sx={{
-          bgcolor: "secondary.main",
-          py: 2,
-          minHeight: {
-            xs: "calc(100vh - 64px)",
-            md: "calc(100vh - 84px)",
-            lg: "calc(100vh - 300px)",
-          },
-          display: "flex",
-        }}
-      >
-        <Container sx={{ flex: 1 }}>{children}</Container>
-      </Box>
+      {children}
       <TheMainFooter />
     </>
   );
