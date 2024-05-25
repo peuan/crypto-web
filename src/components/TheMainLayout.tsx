@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import React, { useState } from "react"
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -14,8 +14,7 @@ import {
   Box,
   Grid,
   Link,
-} from "@mui/material"
-
+} from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import { ReactNode } from "react";
@@ -31,8 +30,8 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
   const handleDrawerToggle = () => {
-    setDrawerOpen(!isDrawerOpen)
-  }
+    setDrawerOpen(!isDrawerOpen);
+  };
 
   const drawer = (
     <Box width={250}>
@@ -69,7 +68,7 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
         </ListItem>
       </List>
     </Box>
-  )
+  );
 
   return (
     <>
@@ -181,24 +180,10 @@ const TheMainLayout = ({ children }: TheMainLayoutProps) => {
           </Drawer>
         </Hidden>
       </Box>
-      <Box
-        component="main"
-        sx={{
-          bgcolor: "secondary.main" ,
-          py: 2,
-          minHeight: {
-            xs: "calc(100vh - 64px)",
-            md: "calc(100vh - 84px)",
-            lg: "calc(100vh - 300px)",
-          },
-          display: "flex",
-        }}
-      >
-        <Container sx={{ flex: 1 }}>{children}</Container>
-      </Box>
+      {children}
       <TheMainFooter />
     </>
-  )
-}
+  );
+};
 
 export default TheMainLayout;
