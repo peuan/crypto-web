@@ -1,19 +1,20 @@
 "use client";
-import { Box, Button, Typography, colors, styled } from "@mui/material";
+import { Box, Button, Typography, Link, styled } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Link from "next/link";
-
 import MuiAccordion, { AccordionProps } from "@mui/material/Accordion";
 import MuiAccordionSummary, {
   AccordionSummaryProps,
 } from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 
+import WrapperContainer from "./WrapperContainer";
+
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
-))(() => ({
+))(({ theme }) => ({
+  backgroundColor: theme.palette.background.custom.secondary,
   borderTop: 0,
-  borderBottom: "1px solid rgba(0, 0, 0, .125)",
+  borderBottom: "1px solid rgba(0, 0, 0, 0.125)",
   width: "100%",
 }));
 
@@ -22,8 +23,8 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
     expandIcon={<ExpandMoreIcon sx={{ fontSize: "2rem" }} />}
     {...props}
   />
-))(() => ({
-  backgroundColor: "#fcf9f2",
+))(({ theme }) => ({
+  backgroundColor: theme.palette.background.custom.secondary,
   padding: "16px 0",
   border: 0,
   "& .MuiAccordionSummary-content": {
@@ -35,32 +36,28 @@ const AccordionSummary = styled((props: AccordionSummaryProps) => (
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-  backgroundColor: "#fcf9f2",
+  backgroundColor: theme.palette.background.custom.secondary,
   padding: `${theme.spacing(2)} 0`,
   border: 0,
 }));
 
 const FaqSection: React.FC = () => {
   return (
-    <Box
+    <WrapperContainer
       sx={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
         gap: 3,
-        backgroundColor: "#fcf9f2",
+        backgroundColor: "background.custom.secondary",
         padding: "80px 24px",
-        margin: {
-          xs: "0 -16px",
-          md: 0,
-        },
       }}
     >
       <Typography
         variant="h2"
         sx={{
-          color: "#0e0e07",
+          color: "text.custom.black",
           fontSize: {
             xs: "1.75rem",
             md: "2.5rem",
@@ -77,7 +74,7 @@ const FaqSection: React.FC = () => {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          backgroundColor: "#fcf9f2",
+          backgroundColor: "background.custom.secondary",
           maxWidth: "790px",
         }}
       >
@@ -86,7 +83,7 @@ const FaqSection: React.FC = () => {
             <Typography
               variant="h5"
               sx={{
-                color: "#0e0e07",
+                color: "text.custom.black",
                 fontSize: "1.5rem",
                 fontWeight: 400,
               }}
@@ -98,7 +95,7 @@ const FaqSection: React.FC = () => {
             <Typography
               variant="subtitle1"
               sx={{
-                color: "#6e6c62",
+                color: "text.secondary",
                 fontWeight: 400,
               }}
             >
@@ -112,7 +109,7 @@ const FaqSection: React.FC = () => {
             <Typography
               variant="h5"
               sx={{
-                color: "#0e0e07",
+                color: "text.custom.black",
                 fontSize: "1.5rem",
                 fontWeight: 400,
               }}
@@ -124,7 +121,7 @@ const FaqSection: React.FC = () => {
             <Typography
               variant="subtitle1"
               sx={{
-                color: "#6e6c62",
+                color: "text.secondary",
                 fontWeight: 400,
               }}
             >
@@ -139,7 +136,7 @@ const FaqSection: React.FC = () => {
             <Typography
               variant="h5"
               sx={{
-                color: "#0e0e07",
+                color: "text.custom.black",
                 fontSize: "1.5rem",
                 fontWeight: 400,
               }}
@@ -151,7 +148,7 @@ const FaqSection: React.FC = () => {
             <Typography
               variant="subtitle1"
               sx={{
-                color: "#6e6c62",
+                color: "text.secondary",
                 fontWeight: 400,
               }}
             >
@@ -164,7 +161,7 @@ const FaqSection: React.FC = () => {
             <Typography
               variant="subtitle1"
               sx={{
-                color: "#6e6c62",
+                color: "text.secondary",
                 fontWeight: 400,
               }}
             >
@@ -177,7 +174,7 @@ const FaqSection: React.FC = () => {
             <Typography
               variant="h5"
               sx={{
-                color: "#0e0e07",
+                color: "text.custom.black",
                 fontSize: "1.5rem",
                 fontWeight: 400,
               }}
@@ -189,7 +186,7 @@ const FaqSection: React.FC = () => {
             <Typography
               variant="subtitle1"
               sx={{
-                color: "#6e6c62",
+                color: "text.secondary",
                 fontWeight: 400,
               }}
             >
@@ -197,7 +194,7 @@ const FaqSection: React.FC = () => {
               can see the step by step process{" "}
               <Link
                 href={"https://app.gnosispay.com/signup"}
-                style={{ color: "#6e6c62" }}
+                sx={{ color: "text.secondary" }}
               >
                 here
               </Link>
@@ -210,7 +207,7 @@ const FaqSection: React.FC = () => {
             <Typography
               variant="h5"
               sx={{
-                color: "#0e0e07",
+                color: "text.custom.black",
                 fontSize: "1.5rem",
                 fontWeight: 400,
               }}
@@ -222,7 +219,7 @@ const FaqSection: React.FC = () => {
             <Typography
               variant="subtitle1"
               sx={{
-                color: "#6e6c62",
+                color: "text.secondary",
                 fontWeight: 400,
               }}
             >
@@ -231,7 +228,7 @@ const FaqSection: React.FC = () => {
                 href={
                   "https://help.gnosispay.com/en/articles/8340445-gnosis-card-country-eligibility"
                 }
-                style={{ color: "#6e6c62" }}
+                sx={{ color: "text.secondary" }}
               >
                 eligible countries
               </Link>{" "}
@@ -242,7 +239,7 @@ const FaqSection: React.FC = () => {
         <Typography
           variant="h5"
           sx={{
-            color: "#0e0e07",
+            color: "text.custom.black",
             fontSize: "1.5rem",
             fontWeight: 400,
             textAlign: "start",
@@ -252,7 +249,7 @@ const FaqSection: React.FC = () => {
           More questions? Contact us at{" "}
           <Link
             href={"https://help@gnosispay.com"}
-            style={{ color: "#0e0e07" }}
+            sx={{ color: "text.custom.black" }}
           >
             help@gnosispay.com
           </Link>
@@ -273,7 +270,7 @@ const FaqSection: React.FC = () => {
       >
         Visit help center
       </Button>
-    </Box>
+    </WrapperContainer>
   );
 };
 
