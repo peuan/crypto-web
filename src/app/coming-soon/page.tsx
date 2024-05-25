@@ -9,6 +9,7 @@ const ComingSoonPage = () => {
       justifyContent="center"
       sx={{
         minHeight: "calc(100vh - 301px)",
+        backgroundColor: "background.custom.secondary",
       }}
     >
       <TimelineIcon sx={{ fontSize: 40, mr: 1 }} />
