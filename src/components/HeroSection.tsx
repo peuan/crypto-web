@@ -1,8 +1,8 @@
 "use client";
 import { Box, Button, Container, Typography } from "@mui/material";
 import Image from "next/image";
-import CreditCardImage from "../assets/images/credit-card.webp";
-import CoinDeskLogo from "../assets/images/coin-desk-logo.png";
+import CreditCardImage from "@/assets/images/credit-card.webp";
+import CoinDeskLogo from "@/assets/images/coin-desk-logo.png";
 import WrapperContainer from "./WrapperContainer";
 
 const HeroSection: React.FC = () => {
@@ -38,10 +38,6 @@ const HeroSection: React.FC = () => {
             minHeight: {
               xs: "unset",
               md: `calc(100vh - 116px)`,
-            },
-            padding: {
-              xs: "0 16px",
-              md: "0 24px",
             },
           }}
         >
@@ -94,10 +90,7 @@ const HeroSection: React.FC = () => {
             >
               Get my card
             </Button>
-            <Typography
-              variant="subtitle1"
-              sx={{ color: "text.custom.darkerGray" }}
-            >
+            <Typography variant="subtitle1" sx={{ color: "text.custom.gray" }}>
               €30.23. Zero fees.
             </Typography>
           </Box>
