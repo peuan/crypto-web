@@ -14,7 +14,9 @@ declare module '@mui/material/styles' {
     secondary: string;
     custom: {
       gray: string;
+      darkerGray: string;
       black: string;
+      white: string;
     }
   }
 
