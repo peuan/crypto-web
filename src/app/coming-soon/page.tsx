@@ -1,36 +1,20 @@
 import { Box, Typography } from "@mui/material";
-import TimeLineIcon from "@mui/icons-material/TimeLine";
-import WrapperContainer from "@/components/WrapperContainer";
+import TimelineIcon from "@mui/icons-material/Timeline";
 
 const ComingSoonPage = () => {
   return (
-    <WrapperContainer
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
       sx={{
-        bgcolor: "secondary.main",
-        py: 2,
-        minHeight: {
-          xs: "calc(100vh - 64px)",
-          md: "calc(100vh - 84px)",
-          lg: "calc(100vh - 300px)",
-        },
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
+        minHeight: "calc(100vh - 301px)",
         backgroundColor: "background.custom.secondary",
       }}
     >
-      <Box
-        sx={{
-          height: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <TimeLineIcon sx={{ fontSize: 40, mr: 1 }} />
-        <Typography variant="h4">Coming Soon...</Typography>
-      </Box>
-    </WrapperContainer>
+      <TimelineIcon sx={{ fontSize: 40, mr: 1 }} />
+      <Typography variant="h4">Coming Soon...</Typography>
+    </Box>
   );
 };
 
