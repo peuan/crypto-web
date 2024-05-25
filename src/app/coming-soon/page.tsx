@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import TimeLineIcon from "@mui/icons-material/TimeLine";
+import TimelineIcon from "@mui/icons-material/Timeline";
 
 const ComingSoonPage = () => {
   return (
@@ -7,9 +7,11 @@ const ComingSoonPage = () => {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      height="100%"
+      sx={{
+        minHeight: "calc(100vh - 301px)",
+      }}
     >
-      <TimeLineIcon sx={{ fontSize: 40, mr: 1 }} />
+      <TimelineIcon sx={{ fontSize: 40, mr: 1 }} />
       <Typography variant="h4">Coming Soon...</Typography>
     </Box>
   );

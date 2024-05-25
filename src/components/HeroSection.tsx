@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
         alignItems: "center",
         justifyContent: "center",
         backgroundColor: "secondary.main",
-        minHeight: `calc(100vh - 116px)`,
+        minHeight: `calc(100vh - 84px)`,
       }}
     >
       <Container
@@ -37,7 +37,7 @@ const HeroSection: React.FC = () => {
             gap: 10,
             minHeight: {
               xs: "unset",
-              md: `calc(100vh - 116px)`,
+              md: `calc(100vh - 84px)`,
             },
           }}
         >
